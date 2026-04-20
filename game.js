@@ -71,3 +71,23 @@ function draw() {
 
 setInterval(update, 1000/60);
 draw();
+
+// Image Load cheyyaan
+const playerImg = new Image();
+playerImg.src = 'assets/player.png';
+
+const mapImg = new Image();
+mapImg.src = 'assets/map_texture.jpg';
+
+// Draw function-il iduka
+function draw() {
+    // ... bakki codes
+    
+    // Map draw cheyyaan
+    let pattern = ctx.createPattern(mapImg, 'repeat');
+    ctx.fillStyle = pattern;
+    ctx.fillRect(0, 0, 4000, 4000); 
+
+    // Player draw cheyyaan
+    ctx.drawImage(playerImg, player.x - 25, player.y - 25, 50, 50);
+}
